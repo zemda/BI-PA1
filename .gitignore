@@ -1,8 +1,3 @@
-
 *.out
-
-*.txt
-
 *.sh
-
 .vscode/
