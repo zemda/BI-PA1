@@ -1,0 +1,35 @@
+Instalatéři I
+
+Úkolem je vytvořit program, který dokáže určit optimální délku potrubí.
+
+Předpokládáme, že máme místnost ve tvaru krychle o délce strany a. Na stěnách místnosti jsou dvě místa, která chceme propojit potrubím. Úkolem je určit, jaká bude nejmenší potřebná délka potrubí. Uvažujeme 2 varianty propojení:
+
+	• trubky ve zdech. Trubky lze umístit pouze rovnoběžně s hranami krychle (důvodem je omezený repertoár spojovacích armatur),
+	• hadice ve zdech. Hadice lze umístit do zdí v libovolném směru, nemusí být rovnoběžné s hranami (hadice nepotřebují armatury, lze je ohýbat).
+V této (jednodušší) variantě zadání uvažujeme pouze stěny krychle. Propojované body, trubky ani hadice nelze umístit do podlahy ani stropu.
+
+Vstupem programu je velikost místnosti (rozměr krychle a) a zadání 2 bodů. Každý bod je zadaný pomocí souřadnic x, y a z. Zadávané hodnoty jsou celá čísla. Krychle je umístěna jedním vrcholem do počátku souřadného systému a její hrany jsou rovnoběžné s osami x/y/z.
+
+
+Výstupem programu je vypočtená potřebná délka trubek a vypočtená potřebná délka hadice. Při výpočtu zanedbáváme délku ohybu. Program zobrazí vypočtené hodnoty ve formátu dle ukázky. Za každým řádkem výpisu je znak odřádkování (\n).
+
+Program musí být schopen detekovat nesprávný vstup. Pokud je na vstupu nesmyslné zadání, program to zjistí, vypíše chybové hlášení a ukončí se. Formát chybového hlášení je uveden v ukázce níže. Pozor, za případným chybovým hlášením je odřádkování (\n). Chybová hlášení zasílejte na standardní výstup (printf), nezasílejte jej na chybový výstup. Za chybu je považováno:
+
+	• nečíselná, nulová nebo záporná hodnota velikosti místnosti,
+	• nečíselná hodnota souřadnice při zadávání bodů,
+	• zadaný bod neleží v žádné stěně,
+	• bod leží v podlaze nebo ve stropu (souřadnice z je nulová nebo rovna velikosti místnosti),
+	• bod leží příliš blízko rohu místnosti (za správně zadané považujeme pouze body ležící alespoň 20 od hrany).
+
+
+
+Ukázka práce programu:
+Rozmer mistnosti:
+300
+Bod #1:
+100 0 100
+Bod #2:
+0 200 20
+Delka potrubi: 380
+Delka hadice: 310.483494
+
